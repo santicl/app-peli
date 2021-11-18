@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="style.css"
+      rel="stylesheet" type="text/css">
+        <title>App Pelis Santiago</title>
+    </head>
+
+    <body>
+        <header class="header">
+           <img class="header__img" src="./img/S.png" alt="">
+           <div class="header__menu">
+               <div class="header__menu--profile">
+                 <img src="./img/user-icon.png" alt="user">
+                 <p>Perfil</p>
+               </div>
+               <ul>
+                   <li><a href="/">Cuenta</a> </li>
+                   <li><a href="/">Cerrar Sesion</a></li>
+               </ul>
+           </div>
+       </header>
+
+        <section class="main">
+            <h2 class="main__titulo">¿Que quieres ver hoy?</h2>
+            <input id="input" class="input" type="text" placeholder="Buscar..." autofocus>
+            <button id="btn" type="button"class="btn" >Buscar</button>
+        </section>
+
+ <h2 class="categories__title">Mis Pelis</h2>
+
+        <section class="carrusel"> <!--Este seccion estan conteniendo los carruseles-->
+            <div id="body" class="carrusel__container">
+                <!--Aqui esta contenido todas las peliculas-->
+            </div>
+        </section>
+        <footer class="footer"> <a href="/">Politica de privacidad</a> <a href="/">Terminos de uso</a> <a href="/">Centro de ayuda</a> </footer>
+        <script src="video.js"></script>
+    </body>
+</html>

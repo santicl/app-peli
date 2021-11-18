@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    background-color: #2a9d8f;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.header {
+    background-color: #2a9d8f;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu {
+    margin-right: 30px;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__img {
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.header__menu--profile p {
+    color: white;
+    margin: 0px;
+    margin-top: 15px;
+}
+
+.header__menu ul {
+    display: none;
+    /*Lo que hace este pedazo es no mostrar el menu de cuenta y cerrar sesion para que en la siguiente especificion que esta abajo salga cuando el mouse pase por encima del perfil y se muestre el menu*/
+    list-style: none;
+    position: absolute;
+    padding: 0px;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+}
+
+/*lo que hace .header__menu:hover ul, ul:hover | es permitir que cuendo el mouse pase por encima del ul de perfil salgan las dos listas, que son, cuenta y cerrar sesion*/
+p{
+    font-size: 15px;
+    color: white;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    text-align: center;
+    height: 300px;
+}
+
+.main__titulo {
+    color: white;
+    font-size: 40px;
+}
+
+.categories__title {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 60%;
+}
+
+::placeholder {
+    /*Este es un atributo del input el cual permite poner un texto diciendo "Buscar... sin que interfiera con un texto que se desee escribir despues en ese input"*/
+    color: white;
+}
+
+.carrusel {
+    overflow: scroll;
+    padding: 0px;
+    position: relative;
+}
+
+.carrusel__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel-item {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 25px;
+    /*Esta pieza es para redondear las esquinas*/
+    background-color: palevioletred;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    /*Esta pieza de codigo es para hacer que cada imagen o video del carrusel vaya una al lado de la otra y no una debajo de otra*/
+}
+
+.carrusel-item:hover~.carrusel-item {
+    /*Este codigo se incluyo la clase hover, la cual permite que, cuando el mouse pase por encima de alguna palabra, se alumbre*/
+    transform: translate3d(100px, 0, 0);
+}
+
+.carrusel__container:hover .carrusel-item {
+    /*Este codigo permite que cuando el mause se pose encima de los carruseles se opaque un poco*/
+    opacity: 0.3;
+}
+
+.carrusel__container:hover .carrusel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.container-ups p {
+    text-align: center;
+    justify-content: center;
+}
+
+.carrusel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carrusel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%. rgba(0, 0, 0, 0) 100%);
+    font-size: 5px;
+    opacity: 1px;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carrusel-item__details img {
+    width: 30px;
+}
+
+.carrusel-item__details p {
+    font-size: 15px;
+}
+
+.inputa {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    height: 50px;
+    padding: 0px 20px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.btn {
+    font-size: 20px;
+    color: #2a9d8f;
+    width: 100px;
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 50px;
+    border-style: none;
+    margin-top: 10px;
+}
+
+.login__container--form label {
+    font-size: 14px;
+}
+
+.login__container--remember-me {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login__container--remember-me a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+    text-decoration: underline;
+}
+
+.login__container--social-media>div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login__container--register {
+    font-size: 14px;
+}
+
+.login__container--register a {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login__container--register a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
